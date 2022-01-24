@@ -14,7 +14,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    elif message.content.startswith("!joke"):
+    elif message.content.startswith("!stupidjoke"):
         r = requests.get('https://sv443.net/jokeapi/v2/joke/Miscellaneous,Pun,Spooky,Christmas?blacklistFlags=nsfw,racist,sexist&type=single').json()
         joke = r['joke']
         await message.channel.send(joke)
